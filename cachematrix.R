@@ -1,5 +1,6 @@
 ## makeCacheMatrix() is a function which constructs a new matrix object from x (an R matrix)
-## and returns a list of functions.
+## and returns a list of functions (set(), get(), setinv(), getinv()).
+##
 ## cacheSolve() is a function which, from x (a new matrix object constructed by makeCacheMatrix()),
 ## returns an R matrix that is the inverse of x$get().
 
@@ -24,9 +25,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## If the inverse has already been calculated, cacheSolve() gets the inverse
-## from the cache and skips the computation (and throws a message), otherwise it simply computes the inverse of x and sets
-## the value of the inverse in the cache via the setinv() function.
+## If the inverse has already been calculated, cacheSolve() gets the inverse from the cache
+## and skips the computation (it then throws a message), otherwise it simply computes the
+## inverse of x and sets the value of the inverse in the cache via the setinv() function.
 
 cacheSolve <- function(x, ...) {
     m <- x$getinv()
