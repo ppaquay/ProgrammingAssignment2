@@ -2,7 +2,8 @@
 ## and returns a list of functions (set(), get(), setinv(), getinv()).
 ##
 ## cacheSolve() is a function which, from x (a new matrix object constructed by makeCacheMatrix()),
-## returns an R matrix that is the inverse of x$get().
+## returns an R matrix that is the inverse of x$get(), ... represents further arguments passed to
+## the solve() function.
 
 ## The new matrix object returned by makeCacheMatrix() is basically a list of four functions : 
 ## set() is a function that sets the value of the object (x in this case),
